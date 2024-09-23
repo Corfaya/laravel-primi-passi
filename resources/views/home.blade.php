@@ -17,7 +17,7 @@
     <main class="my-5">
         <div class="col-12">
             <h1 class="text-center">
-                
+                Hello World
             </h1>
         </div>
     </main>
