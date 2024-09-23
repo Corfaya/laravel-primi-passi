@@ -16,4 +16,35 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $msgg = "Hello World!";
     return view('home', compact('msgg'));
-});
+})->name('homepage');
+
+Route::get('/products', function () {
+    $data = [
+        "title" => "I nostri prodotti",
+    ];
+    $items = [
+        "Lorem",
+        "Ipsum",
+        "Dolor",
+        "Sit Amet",
+        "Eccetera",
+        "Test"
+    ];
+    return view('products', $data, compact('items'));
+})->name('products');
+
+Route::get('/about', function () {
+    $data = [
+        "title" => "Chi siamo?",
+        "paragraph" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, consequatur. Numquam dolore quod et laboriosam? Quidem error fugiat deserunt odit, quos quod exercitationem sapiente, sunt dolorem quam iure vitae cum! Et amet consectetur adipisicing elit. Iure rerum temporibus, fugiat, illum at iste sapiente voluptatibus explicabo porro animi, eum corporis. Temporibus doloremque, odio ipsam maiores ratione sunt officiis."
+    ];
+    return view('about', $data);
+})->name('about-us');
+
+Route::get('/contacts', function () {
+    $data = [
+        "title" => "Entra in contatto con noi!",
+        "paragraph" => "Compila questo rapido form"
+    ];
+    return view('contacts', $data);
+})->name('contact-us');

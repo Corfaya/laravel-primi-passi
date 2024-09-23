@@ -20,10 +20,22 @@
     </header>
 
     <main class="my-5">
-        <div class="col-12">
-            <h1 class="text-center">
-                {{ $msgg }}
-            </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">
+                        {{ $title }}
+                    </h1>
+                </div>
+                <div class="row">
+
+                    <div class="col-6 offset-3">
+                        <p class="my-4">
+                            {{ $paragraph }}
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>

@@ -20,10 +20,25 @@
     </header>
 
     <main class="my-5">
-        <div class="col-12">
-            <h1 class="text-center">
-                {{ $msgg }}
-            </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">
+                        {{ $title }}
+                    </h1>
+                </div>
+                @foreach ($items as $item)
+                <div class="col-4">
+                    <div class="card my-3">
+                        <img src="https://placehold.co/400x400?text=Prodotto" class="card-img-top" alt="Item">
+                        <div class="card-body">
+                          <h5 class="card-title">{{$item}}</h5>
+                          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ad illum totam alias ipsum aliquam exercitationem officiis quis placeat omnis! Soluta eligendi eos eveniet qui adipisci tenetur sapiente veritatis ipsam!</p>
+                        </div>
+                      </div>          
+                </div>
+                @endforeach
+            </div>
         </div>
     </main>
 </body>
