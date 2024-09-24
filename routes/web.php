@@ -19,9 +19,7 @@ Route::get('/', function () {
 })->name('homepage');
 
 Route::get('/products', function () {
-    $data = [
-        "title" => "I nostri prodotti",
-    ];
+    $title = "I nostri prodotti";
     $items = [
         "Lorem",
         "Ipsum",
@@ -30,7 +28,7 @@ Route::get('/products', function () {
         "Eccetera",
         "Test"
     ];
-    return view('products', $data, compact('items'));
+    return view('products', compact('title', 'items'));
 })->name('products');
 
 Route::get('/about', function () {
